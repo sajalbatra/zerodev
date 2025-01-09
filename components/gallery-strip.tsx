@@ -1,11 +1,11 @@
 import Image from "next/image"
 
 const images = [
-  { src: "/gallery/nebula.jpg", alt: "Nebula in deep space" },
-  { src: "/gallery/eclipse.jpg", alt: "Solar eclipse" },
-  { src: "/gallery/spacewalk.jpg", alt: "Astronaut in space" },
-  { src: "/gallery/milkyway.jpg", alt: "Milky Way galaxy" },
-  { src: "/gallery/astronauts.jpg", alt: "Astronaut figures" }
+  { src: "/aryansingh.jpg", alt: "Nebula in deep space" },
+  { src: "/aryansingh.jpg", alt: "Solar eclipse" },
+  { src: "/aryansingh.jpg", alt: "Astronaut in space" },
+  { src: "/aryansingh.jpg", alt: "Milky Way galaxy" },
+  { src: "/aryansingh.jpg", alt: "Astronaut figures" }
 ]
 
 export default function GalleryStrip() {

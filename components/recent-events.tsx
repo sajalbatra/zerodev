@@ -17,7 +17,7 @@ const events: Event[] = [
     date: "18/06/2023",
     title: "TALK ON DARK MATTER",
     description: "Lorem ipsum dolor sit amet consectetur. Augue duis etiam pulvinar duis interdum accumsan tempor bibendum amet.Lorem ipsum dolor sit amet consectetur. Augue duis etiam pulvinar duis interdum accumsan tempor bibendum amet.Lorem ipsum dolor sit amet consectetur.",
-    image: "/events/dark-matter.jpg"
+    image: "/aryansingh.jpg"
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ const events: Event[] = [
     date: "16/06/2023",
     title: "ASTRONAUTS WE KNOW",
     description: "Lorem ipsum dolor sit amet consectetur. Augue duis etiam pulvinar duis interdum accumsan tempor bibendum amet.Lorem ipsum dolor sit amet consectetur. Augue duis etiam pulvinar duis interdum accumsan tempor bibendum amet.",
-    image: "/events/astronaut.jpg"
+    image: "/aryansingh.jpg"
   }
 ]
 
@@ -33,13 +33,6 @@ export default function RecentEvents() {
   return (
     <section className="px-6 py-20">
       <div className="relative">
-        <Image
-          src="/moon.png"
-          alt=""
-          width={400}
-          height={400}
-          className="absolute -left-20 top-0"
-        />
         <h2 className="text-4xl font-bold mb-12 relative z-10">
           RECENT EVENTS
         </h2>
@@ -64,7 +57,7 @@ export default function RecentEvents() {
                       <div className="text-sm mb-2">{event.date}</div>
                       <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
                       <p className="text-gray-300 mb-6">{event.description}</p>
-                      <Button variant="outline">Learn More</Button>
+                      <Button variant="outline" className="text-black">Learn More</Button>
                     </div>
                   </>
                 ) : (
@@ -73,7 +66,7 @@ export default function RecentEvents() {
                       <div className="text-sm mb-2">{event.date}</div>
                       <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
                       <p className="text-gray-300 mb-6">{event.description}</p>
-                      <Button variant="outline">Learn More</Button>
+                      <Button variant="outline" className="text-black">Learn More</Button>
                     </div>
                     <div className="relative aspect-[4/3]">
                       <Image

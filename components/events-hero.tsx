@@ -4,7 +4,7 @@ export default function EventsHero() {
   return (
     <section className="relative h-[60vh] overflow-hidden">
       <Image
-        src="/hero-astronaut.jpg"
+        src="/aryansingh.jpg"
         alt=""
         fill
         className="object-cover"

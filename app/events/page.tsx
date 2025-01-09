@@ -5,7 +5,7 @@ import GalleryStrip from "@/components/gallery-strip"
 import Footer from "@/components/footer"
 
 export const metadata = {
-  title: 'Events | Dhruva Astronomy Club',
+  title: 'Events | Zero Devs',
   description: 'Explore our upcoming and past astronomy events',
 }
 

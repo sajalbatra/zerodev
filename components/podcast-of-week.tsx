@@ -13,25 +13,25 @@ const episodes: Episode[] = [
     number: "01",
     title: "SPACEBUZZ EP. 1",
     tags: ["#SPACE", "#ASTRONOMY"],
-    image: "/episodes/ep1.jpg"
+    image: "/sajalbatra.jpg"
   },
   {
     number: "02",
     title: "SPACEBUZZ EP. 2",
     tags: ["#COSMOS", "#ASTRONOMY"],
-    image: "/episodes/ep2.jpg"
+    image: "/agrim.jpg"
   },
   {
     number: "03",
     title: "SPACEBUZZ EP. 3",
     tags: ["#ASTRONAUT", "#ASTRONOMY"],
-    image: "/episodes/ep3.jpg"
+    image: "/aryansingh.jpg"
   },
   {
     number: "04",
     title: "SPACEBUZZ EP. 4",
     tags: ["#SPACE", "#ASTRONOMY"],
-    image: "/episodes/ep4.jpg"
+    image: "/shivamsingh.jpg"
   }
 ]
 
@@ -46,7 +46,7 @@ export default function PodcastOfWeek() {
           <p className="text-gray-300">
             Lorem ipsum dolor sit amet consectetur. Diam donec egestas est leo malesuada massa quisque vitae at. Aliquet scelerisque magna nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus consequat.
           </p>
-          <Button variant="outline" className="gap-2">
+          <Button variant="outline" className="gap-2 text-black">
             Learn More
             <span className="rotate-45">↗</span>
           </Button>
