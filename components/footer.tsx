@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-60">
-          {/* Cool One-liner Section */}
+       
           <div className="col-span-2">
             <h2 className="text-6xl font-bold leading-tight mb-2">
               Innovate.Code.Evolve
