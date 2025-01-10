@@ -7,7 +7,7 @@ export default function AboutHero() {
       <div>
         <h1 className="text-7xl font-bold mb-8">ABOUT US.</h1>
         <p className="text-gray-300">
-          Lorem ipsum dolor sit amet consectetur. Diam donec egestas est leo malesuada massa quisque vitae at. Aliquet scelerisque magna nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus consequat.Lorem ipsum dolor sit amet consectetur. Diam donec egestas est leo malesuada massa quisque vitae at. Aliquet scelerisque magna nulla aenean euismod sed. Adipiscing placerat quisque eu rhoncus consequat.
+        Welcome to ZeroDev! We are thrilled to be the proud winners of a SIH. Our mission is to inspire and educate the developer community through engaging content about coding, innovative tech events, and insightful developer stories. Our talented team of developers, designers, community leaders, and editors work tirelessly to bring you the best in technology. Join us on our journey to make a lasting impact in the tech world.
         </p>
       </div>
       <div className="flex justify-center items-center">

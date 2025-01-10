@@ -37,54 +37,37 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "Shivan Singh",
+    name: "Shivam Singh",
     image: "/shivamsingh.jpg",
     social: {
-      github: "https://github.com/shivan",
-      linkedin: "https://linkedin.com/in/shivan",
-      twitter: "https://twitter.com/shivan",
-      instagram: "https://twitter.com/sajal_batra"
-
+      linkedin: "https://www.linkedin.com/in/shivam-singh-3599ab2a5",
+      instagram: "https://www.instagram.com/_i.shivam017/"
     }
   },
   {
     name: "Agrim Sangotra",
     image: "/agrim.jpg",
     social: {
-      instagram: "https://instagram.com/agrim",
-      linkedin: "https://linkedin.com/in/agrim",
-      twitter: "https://twitter.com/agrim",
-      github: "https://twitter.com/sajal_batra"
-
+      instagram: "https://www.instagram.com/agrxim/",
+      linkedin: "https://www.linkedin.com/in/agrim-sangotra/",
+      twitter: "https://x.com/agxrim",
+      github: "https://github.com/agrixm"
     }
   },
   {
     name: "Shresth Singh",
     image: "/shresthsingh.jpg",
     social: {
-      instagram: "https://instagram.com/agrim",
-      linkedin: "https://linkedin.com/in/agrim",
-      twitter: "https://twitter.com/agrim",
-      github: "https://twitter.com/sajal_batra"
+      instagram: "https://www.instagram.com/shresth_captures/",
+      linkedin: "https://www.linkedin.com/in/shresth-singh-2abbb4249/"
     }
   },
-  // {
-  //   name: "Bhavuk Kathuria",
-  //   image: "/bhavuk.jpg",
-  //   social: {
-  //     instagram: "https://instagram.com/bhavuk",
-  //     github: "https://github.com/bhavuk",
-  //     linkedin: "https://linkedin.com/in/bhavuk"
-  //   }
-  // },
   {
     name: "Aakrash",
     image: "/aakrash.png",
     social: {
-      instagram: "https://instagram.com/agrim",
-      linkedin: "https://linkedin.com/in/agrim",
-      twitter: "https://twitter.com/agrim",
-      github: "https://twitter.com/sajal_batra"
+      instagram: "https://www.instagram.com/am.aakarsh?igsh=cm00N3Iyc2RzYzhl&utm_source=qr",
+      linkedin: "https://www.linkedin.com/in/aakarsh-rawat-a0b488276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   }
 ]
@@ -114,8 +97,8 @@ export default function TeamLeaders() {
       >
         TEAM
       </motion.h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {teamMembers.map((member, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {teamMembers.slice(0, 4).map((member, index) => (
           <motion.div
             key={index}
             className="group relative space-y-4"
@@ -175,7 +158,69 @@ export default function TeamLeaders() {
           </motion.div>
         ))}
       </div>
+      
+
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-xl mx-auto">
+        {teamMembers.slice(4).map((member, index) => (
+          <motion.div
+            key={index + 4}
+            className="group relative space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: (index + 4) * 0.1 }}
+            whileHover={{ y: -5 }}
+          >
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="flex gap-4">
+                  {member.social?.instagram && (
+                    <SocialIcon 
+                      href={member.social.instagram} 
+                      icon={Instagram} 
+                      label={`${member.name}'s Instagram`}
+                    />
+                  )}
+                  {member.social?.github && (
+                    <SocialIcon 
+                      href={member.social.github} 
+                      icon={Github} 
+                      label={`${member.name}'s GitHub`}
+                    />
+                  )}
+                  {member.social?.linkedin && (
+                    <SocialIcon 
+                      href={member.social.linkedin} 
+                      icon={Linkedin} 
+                      label={`${member.name}'s LinkedIn`}
+                    />
+                  )}
+                  {member.social?.twitter && (
+                    <SocialIcon 
+                      href={member.social.twitter} 
+                      icon={Twitter} 
+                      label={`${member.name}'s Twitter`}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: (index + 4) * 0.1 + 0.3 }}
+            >
+              <h3 className="font-bold text-lg">{member.name}</h3>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   )
 }
-
