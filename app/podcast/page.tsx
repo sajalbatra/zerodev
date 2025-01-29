@@ -3,7 +3,7 @@ import PodcastHero from "@/components/podcast-hero"
 import FeaturedPodcasts from "@/components/featured-podcasts"
 import PodcastOfWeek from "@/components/podcast-of-week"
 import Footer from "@/components/footer"
-import ComingSoon from "@/components/ui/commingsoon"
+import ComingSoon from "@/components/commingsoon"
 export const metadata = {
   title: 'Podcasts | Zero Devs',
   description: 'Listen to our astronomy and space exploration podcasts',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function PodcastPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className=" bg-black text-white">
       <Navbar />
       <PodcastHero />
       {/* <FeaturedPodcasts />

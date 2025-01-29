@@ -31,9 +31,11 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
           <Link href="/" className="hover:text-gray-300 transition-colors">HOME</Link>
-          <Link href="/events" className="hover:text-gray-300 transition-colors">EVENTS</Link>
+          <Link href="/projects" className="hover:text-gray-300 transition-colors">PROJECTS</Link>
           <Link href="/podcast" className="hover:text-gray-300 transition-colors">PODCAST</Link>
           <Link href="/about" className="hover:text-gray-300 transition-colors">ABOUT</Link>
+          <Link href="/blog" className="hover:text-gray-300 transition-colors">BLOGS</Link>
+
         </div>
 
         {/* Hamburger Button */}
@@ -67,11 +69,11 @@ export default function Navbar() {
             HOME
           </Link>
           <Link 
-            href="/events" 
+            href="/projects" 
             className="w-full text-center py-2 hover:bg-gray-100 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            EVENTS
+            PROJECTS
           </Link>
           <Link 
             href="/podcast" 
@@ -87,6 +89,14 @@ export default function Navbar() {
           >
             ABOUT
           </Link>
+          <Link 
+            href="/blog" 
+            className="w-full text-center py-2 hover:bg-gray-100 transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            BLOGS
+          </Link>          
+          
         </div>
       </div>
     </nav>

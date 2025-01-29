@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TeamPhoto() {
   return (
-    <section className="flex justify-center items-center py-20">
+    <section className="flex justify-center items-center ">
       <div className="w-[90%] max-w-6xl">
         <div className="overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl border border-white">
           <Image

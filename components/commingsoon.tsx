@@ -1,29 +1,56 @@
 "use client"
 
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Bell } from 'lucide-react';
 
 export default function EventsComingSoon() {
+  const targetDate = new Date("2025-02-01");
+
   const [timeLeft, setTimeLeft] = useState({
-    days: 69,
-    hours: 24,
-    minutes: 60,
-    seconds: 60
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
   });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => ({
-        ...prev,
-        seconds: prev.seconds > 0 ? prev.seconds - 1 : 60,
-        minutes: prev.seconds === 0 ? (prev.minutes > 0 ? prev.minutes - 1 : 60) : prev.minutes,
-        hours: prev.minutes === 0 && prev.seconds === 0 ? (prev.hours > 0 ? prev.hours - 1 : 24) : prev.hours,
-        days: prev.hours === 0 && prev.minutes === 0 && prev.seconds === 0 ? prev.days - 1 : prev.days
-      }));
-    }, 1000);
+    const updateTimer = () => {
+      const now = new Date();
+      const timeDifference = targetDate - now;
 
+      // If the target date has passed, set everything to 0
+      if (timeDifference <= 0) {
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
+        return;
+      }
+
+      // Calculate remaining time
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      setTimeLeft({
+        days,
+        hours,
+        minutes,
+        seconds
+      });
+    };
+
+    // Update every second
+    const timer = setInterval(updateTimer, 1000);
+
+    // Initial call to set the timer
+    updateTimer();
+
+    // Clean up the interval when the component unmounts
     return () => clearInterval(timer);
   }, []);
 
@@ -62,7 +89,7 @@ export default function EventsComingSoon() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20">
+    <section className="flex items-center justify-center ">
       <motion.div 
         className="text-center px-4"
         variants={containerVariants}
@@ -115,16 +142,16 @@ export default function EventsComingSoon() {
           variants={itemVariants}
           className="max-w-md mx-auto"
         >
-          <div className="relative">
+          <div className="relative flex content-center gap-8">
             <input 
               type="email" 
-              placeholder="Enter your email for updates" 
-              className="w-full px-6 py-4 rounded-full bg-gray-800/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 backdrop-blur-sm"
+              placeholder="Enter your email" 
+              className="md:w-full px-6 py-4 rounded-full bg-gray-800/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 backdrop-blur-sm w-3/4"
             />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="absolute right-2 top-2 bg-purple-500 text-white px-6 py-2 rounded-full hover:bg-purple-600 transition-colors flex items-center gap-2"
+              className="absolute md:right-2 md:top-0 bg-purple-500 text-white md:px-6 md:py-2 rounded-full hover:bg-purple-600 transition-colors flex items-center gap-2 p-2 m-2 right-0 "
             >
               <Bell className="w-4 h-4" />
               Notify Me
