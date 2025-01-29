@@ -7,7 +7,7 @@ import { Calendar, Clock, Bell } from 'lucide-react';
 
 export default function EventsComingSoon() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 30,
+    days: 69,
     hours: 24,
     minutes: 60,
     seconds: 60
