@@ -74,7 +74,7 @@ export default function Home() {
         </section>
 
         {/* About Zero Dev Section */}
-        <section className=" flex items-center px-6 backdrop-blur-sm bg-black/30">
+        <section className=" flex items-center px-6 ">
           <div className="w-full max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">ABOUT ZERO DEV</h2>
             <p className="text-xl mb-8">
@@ -87,9 +87,11 @@ export default function Home() {
               "INNOVATION STARTS WITH LEARNING AND SHARING — AND THAT'S WHAT WE DO AT ZERO DEV."
             </blockquote>
           </div>
+          
         </section>
+        <Footer />
       </div>
-      <Footer />
+     
     </main>
   )
 }
